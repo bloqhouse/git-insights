@@ -90,6 +90,7 @@ app.use((err, req, res, _next) => {
   }
 
   console.error(err);
+  console.log(err);
   // If our routes specified a specific response, then send that. Otherwise,
   // send a generic message so as not to leak anything.
   res.status(500).send(err.response || 'Something broke!');
